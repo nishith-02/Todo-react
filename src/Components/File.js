@@ -26,13 +26,21 @@ function File({ todos, settodos, text, settext, setstates }) {
   return (
     <div>
       <form>
-        <input
-          type="text"
-          placeholder="Add Todo"
-          value={text}
-          className="input"
-          onChange={hello}
-        /><button className="add"  type="submit" onClick={add}><img src="https://img.icons8.com/office/16/000000/plus-math.png" alt="add"/></button>
+        <div className="position">
+          <input
+            type="text"
+            placeholder="Add Todo"
+            value={text}
+            className="input"
+            onChange={hello}
+          />
+          <button className="add" type="submit" onClick={add}>
+            <img
+              src="https://img.icons8.com/office/16/000000/plus-math.png"
+              alt="add"
+            />
+          </button>
+        </div>
         <select className="select" onChange={selectHandler}>
           <option className="option">All</option>
           <option className="option">Completed</option>

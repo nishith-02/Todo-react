@@ -24,14 +24,14 @@ body{
     display: inline;
 }
 .todo{
-    width:30%;
+    width:60%;
     display: grid;
     grid-template-columns: 38fr 1fr 1fr;
-    margin-top: 1%;
-    box-shadow: 10px 10px 8px #888888;
+    margin-top: 2%;
+    height: 10vh;
 }
 .input{
-    width: 30%;
+    width: 60%;
     padding-top: 1%;
     padding-bottom: 1%;
     position: relative;
@@ -39,8 +39,8 @@ body{
 }
 .add{
     position: absolute;
-    right: 70%;
-    top:2.9%;
+    right: 5%;
+    top: -35%;
     padding-top:5px;
     padding-bottom:5px;
     cursor: pointer;
@@ -49,9 +49,23 @@ body{
 }
 .select{
     width: 15%;
-    height: 48px;
+    height: 35px;
     margin-left: 2%;
     font-size: 100%;
     cursor: pointer;
 }
-
+.position{
+    display: inline;
+    position: relative;
+}
+.app{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-left: 5%;
+}
+.heading{
+    text-align: center;
+    margin-top: 7%;
+}
