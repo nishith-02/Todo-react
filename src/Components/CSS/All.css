@@ -1,0 +1,57 @@
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+body{
+    background: linear-gradient(90deg,#457fca, #5691c8);
+    color:#fff;
+}
+.correct{
+   cursor: pointer;
+   border: none;
+   margin-top: 45%;
+}
+.tick{
+    height: 20px;
+    width: 20px;
+}
+.wrong{
+   cursor: pointer;
+   border: none;
+   margin-top: 45%;
+}
+.text{
+    display: inline;
+}
+.todo{
+    width:30%;
+    display: grid;
+    grid-template-columns: 38fr 1fr 1fr;
+    margin-top: 1%;
+    box-shadow: 10px 10px 8px #888888;
+}
+.input{
+    width: 30%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    position: relative;
+    font-size: 100%;
+}
+.add{
+    position: absolute;
+    right: 70%;
+    top:2.9%;
+    padding-top:5px;
+    padding-bottom:5px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+}
+.select{
+    width: 15%;
+    height: 48px;
+    margin-left: 2%;
+    font-size: 100%;
+    cursor: pointer;
+}
+

@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState, useEffect } from "react";
+import File from "./Components/File";
+import Todos from "./Components/Todos";
+import './Components/CSS/All.css'
 function App() {
+  const [text, settext] = useState("");
+  const [todos, settodos] = useState([]);
+  const [filteredtodos, setfilteredtodos] = useState([]);
+  const [states, setstates] = useState("All");
+  useEffect(() => {
+    switch (states) {
+      case "Completed":
+        setfilteredtodos(todos.filter((todo) => todo.completed === true));
+        break;
+      case "Uncompleted":
+        setfilteredtodos(todos.filter((todo) => todo.completed === false));
+        break;
+      default:
+        setfilteredtodos(todos);
+        break;
+    }
+  }, [todos, states]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <File
+        todos={todos}
+        settodos={settodos}
+        text={text}
+        settext={settext}
+        setstates={setstates}
+      />
+      <Todos todos={todos} filteredtodos={filteredtodos} settodos={settodos} />
     </div>
   );
 }
-
 export default App;
