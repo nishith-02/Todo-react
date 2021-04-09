@@ -1,71 +1,94 @@
-.completed{
-    text-decoration: line-through;
-    opacity: 0.5;
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
-body{
-    background: linear-gradient(90deg,#457fca, #5691c8);
-    color:#fff;
+body {
+  background: linear-gradient(90deg, #457fca, #5691c8);
+  color: #fff;
 }
-.correct{
-   cursor: pointer;
-   border: none;
-   margin-top: 45%;
+.correct {
+  cursor: pointer;
+  border: none;
+  margin-top: 45%;
 }
-.tick{
-    height: 20px;
-    width: 20px;
+.tick {
+  height: 20px;
+  width: 20px;
 }
-.wrong{
-   cursor: pointer;
-   border: none;
-   margin-top: 45%;
+.wrong {
+  cursor: pointer;
+  border: none;
+  margin-top: 45%;
 }
-.text{
-    display: inline;
+.text {
+  display: inline;
 }
-.todo{
-    width:60%;
-    display: grid;
-    grid-template-columns: 38fr 1fr 1fr;
-    margin-top: 2%;
-    height: 10vh;
+.todo {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 38fr 1fr 1fr;
+  margin-top: 2%;
+  height: 10vh;
 }
-.input{
-    width: 60%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    position: relative;
-    font-size: 100%;
+.input {
+  width: 60%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  position: relative;
+  font-size: 100%;
 }
-.add{
+.add {
+  position: absolute;
+  right: 5%;
+  top: -35%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+}
+.select {
+  width: 15%;
+  height: 35px;
+  margin-left: 2%;
+  font-size: 100%;
+  cursor: pointer;
+}
+.position {
+  display: inline;
+  position: relative;
+}
+.app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 5%;
+}
+.heading {
+  text-align: center;
+  margin-top: 7%;
+}
+@media screen and (max-width: 785px) {
+  .todo {
+    width: 70vw;
+    height: 8vh;
+    margin-top: 3%;
+  }
+  .input {
+    width: 50vw;
+  }
+  .add {
+    height: 1vh;
+  }
+  .select {
+    width: 20vw;
+    margin-left: 80%;
+  }
+  .app {
     position: absolute;
-    right: 5%;
-    top: -35%;
-    padding-top:5px;
-    padding-bottom:5px;
-    cursor: pointer;
-    background-color: #fff;
-    border: none;
-}
-.select{
-    width: 15%;
-    height: 35px;
-    margin-left: 2%;
-    font-size: 100%;
-    cursor: pointer;
-}
-.position{
-    display: inline;
-    position: relative;
-}
-.app{
-    position: absolute;
-    top:50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    margin-left: 5%;
-}
-.heading{
-    text-align: center;
-    margin-top: 7%;
+    transform: translate(-50%, -50%);
+  }
 }
