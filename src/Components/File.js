@@ -1,5 +1,9 @@
-import React from "react";
+import React,{useEffect,useRef} from "react";
 function File({ todos, settodos, text, settext, setstates }) {
+  const inputRef=useRef(null);
+  useEffect(()=>{
+    inputRef.current.focus();
+  },[])
   const hello = (e) => {
     settext(e.target.value);
   };
@@ -28,6 +32,7 @@ function File({ todos, settodos, text, settext, setstates }) {
       <form>
         <div className="position">
           <input
+          ref={inputRef}
             type="text"
             placeholder="Add Todo"
             value={text}
